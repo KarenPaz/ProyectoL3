@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Entregas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace Entregas
 {
     public partial class FormLogin : Form
     {
+        SeguridadBL _seguridad;
+
         public FormLogin()
         {
             InitializeComponent();
+
+            _seguridad = new SeguridadBL();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,7 +40,9 @@ namespace Entregas
             usuario = Usuario.Text;
             contrasena = Contrasena.Text;
 
-            if ( usuario == "admin" && contrasena == "1234"  || usuario == "bily"  && contrasena == "5678")
+            var resultado = _seguridad.Acceso(usuario, contrasena);
+
+            if (resultado == true)
             {
                 this.Close();
             }

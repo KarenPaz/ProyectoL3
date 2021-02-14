@@ -71,5 +71,10 @@ namespace Entregas
             formRuta.MdiParent = this;
             formRuta.Show();
         }
+
+        private void generalToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

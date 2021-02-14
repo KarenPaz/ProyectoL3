@@ -112,6 +112,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\BL.Entregas.ClienteBL.datasource" />
+    <None Include="Properties\DataSources\BL.Entregas.Clientes.datasource" />
+    <None Include="Properties\DataSources\BL.Entregas.SeguridadBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,6 +130,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="seguridad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL.Entregas\BL.Entregas.csproj">
+      <Project>{4de43fe0-a20c-4e06-9f17-12d8ae847886}</Project>
+      <Name>BL.Entregas</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
