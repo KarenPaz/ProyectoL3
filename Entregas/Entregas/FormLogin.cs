@@ -48,6 +48,10 @@ namespace Entregas
             usuario = Usuario.Text;
             contrasena = Contrasena.Text;
 
+            button1.Enabled = false;
+            button1.Text = "Verificando...";
+            Application.DoEvents();
+
             var resultado = _seguridad.Acceso(usuario, contrasena);
 
             if (resultado == true)

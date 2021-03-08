@@ -26,6 +26,16 @@ namespace BL.Entregas
             return ListadeClientes;
         }
 
+        public void CancelarCambios()//
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())//
+            {
+                item.State = EntityState.Unchanged;//
+                item.Reload();//
+            }            
+
+        }
+
         //BOTONES DE GUARDAR 
         public Resultado GuardarCliente(Clientes cliente)
         {
@@ -34,10 +44,10 @@ namespace BL.Entregas
             {
                 return resultado;
             }
-            _contexto.SaveChanges();
+            
           
             resultado.Exitoso = true;
-            
+           
             return resultado;
         }
         // Funcion AGREGAMOS UN NUEVO CLIENTE
@@ -45,6 +55,7 @@ namespace BL.Entregas
         {
             var nuevoCliente = new Clientes();
             ListadeClientes.Add(nuevoCliente);
+            
         }
         //Funcion Eliminar 
         public bool EliminarCliente(int Id)
@@ -54,7 +65,7 @@ namespace BL.Entregas
                 if (cliente.Id == Id)
                 {
                     ListadeClientes.Remove(cliente);
-                    _contexto.SaveChanges();
+                   
                     return true;
                 }
                     
@@ -92,7 +103,7 @@ namespace BL.Entregas
                 resultado.Mensaje = "Ingrese un nombre de la empresa";
                 resultado.Exitoso = false;
             }
-            
+        
             return resultado;
         }
     }
@@ -107,6 +118,9 @@ namespace BL.Entregas
         public string Telefono { get; set; }
         public string Contacto { get; set; }
         public bool Activo { get; set; }
+        public byte[] Foto { get; set; }//
+        public int TipoId { get; set; }//
+        public Tipo Tipo { get; set; }//
 
     }
 
