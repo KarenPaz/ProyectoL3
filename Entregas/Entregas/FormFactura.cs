@@ -86,7 +86,21 @@ namespace Entregas
 
         private void button2_Click(object sender, EventArgs e)
         {
+            var entrega = (Entrega)listaEntregasBindingSource.Current;
+            var entregaDetalle = (EntregaDetalle)entregaDetalleBindingSource.Current;
+
+            _entregaBL.RemoverEntregaDetalle(entrega, entregaDetalle);
+            DeshabilitarHabilitarBotones(false);
 
         }
-    }
+
+     //   private void entregaDetalleDataGridView_CellEndit(object sender, DataGridViewCellEventArgs e)
+    //    {
+      //      var entrega = (Entrega)listaEntregasBindingSource.Current;
+      //      _entregaBL.CalcularEntrega(entrega);
+
+      //      listaEntregasBindingSource.ResetBindings(false);
+
+     //   }
+   }
 }

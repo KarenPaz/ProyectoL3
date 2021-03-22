@@ -75,6 +75,17 @@ namespace BL.Entregas
 
             return resultado;
         }
+        public void CañcularEntrega(Entrega entrega)
+        {
+            if (entrega != null)
+            {
+             //   double subtotal = 0;
+                foreach (var detalle in entrega.EntregaDetalle)
+                {
+
+                }
+            }
+        }
     }
 
     public class Entrega
