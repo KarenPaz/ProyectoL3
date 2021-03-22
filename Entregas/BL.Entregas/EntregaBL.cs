@@ -75,15 +75,21 @@ namespace BL.Entregas
 
             return resultado;
         }
-        public void CañcularEntrega(Entrega entrega)
+        public void CalcularEntrega(Entrega entrega)
         {
             if (entrega != null)
             {
-             //   double subtotal = 0;
+                double subtotal = 0;
                 foreach (var detalle in entrega.EntregaDetalle)
                 {
+                    detalle.Costo = 20;
+                    detalle.Total = detalle.Peso * detalle.Costo;
 
+                    subtotal += detalle.Total;
                 }
+                entrega.Subtotal = subtotal;
+                entrega.Impuesto = subtotal * 0.15;
+                entrega.Total = subtotal + entrega.Impuesto;
             }
         }
     }
@@ -118,6 +124,7 @@ namespace BL.Entregas
         public EntregaDetalle()
         {
             Peso = 1;
+          
         }
 
     }

@@ -94,13 +94,17 @@ namespace Entregas
 
         }
 
-     //   private void entregaDetalleDataGridView_CellEndit(object sender, DataGridViewCellEventArgs e)
-    //    {
-      //      var entrega = (Entrega)listaEntregasBindingSource.Current;
-      //      _entregaBL.CalcularEntrega(entrega);
+        private void entregaDetalleDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+        }
 
-      //      listaEntregasBindingSource.ResetBindings(false);
+        private void entregaDetalleDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            var entrega = (Entrega)listaEntregasBindingSource.Current;
+            _entregaBL.CalcularEntrega(entrega);
 
-     //   }
-   }
+            listaEntregasBindingSource.ResetBindings(false);
+        }
+    }
 }
