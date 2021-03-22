@@ -30,6 +30,24 @@ namespace BL.Entregas
             var nuevaEntrega = new Entrega();
             ListaEntregas.Add(nuevaEntrega);
         }
+        public void AgregarEntregaDetalle(Entrega entrega)
+        {
+            if (entrega != null)
+            {
+                var nuevoDetalle = new EntregaDetalle();
+                entrega.EntregaDetalle.Add(nuevoDetalle);
+            }
+        }
+
+        public void RemoverEntregaDetalle(Entrega entrega, EntregaDetalle entregaDetalle)
+        {
+            if (entrega != null && entregaDetalle != null)
+            {
+                var nuevoDetalle = new EntregaDetalle();
+                entrega.EntregaDetalle.Remove(entregaDetalle);
+            }
+        }
+
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())
