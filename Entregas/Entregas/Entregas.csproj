@@ -177,6 +177,24 @@
   <ItemGroup>
     <None Include="istockphoto-637864518-170667a.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="entrega.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="candado2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\146-1461371_mensajeria-y-paqueteria-png-transparent-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="repartidor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cajas.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

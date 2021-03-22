@@ -63,6 +63,16 @@ namespace Entregas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _146_1461371_mensajeria_y_paqueteria_png_transparent_png {
+            get {
+                object obj = ResourceManager.GetObject("146-1461371_mensajeria-y-paqueteria-png-transparent-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2ef2f3289430a49cfbd483bf44dd2f17 {
             get {
                 object obj = ResourceManager.GetObject("2ef2f3289430a49cfbd483bf44dd2f17", resourceCulture);
@@ -76,6 +86,36 @@ namespace Entregas.Properties {
         internal static System.Drawing.Bitmap _5ce2d2238dae3500d605e67d_Delivery_Management_system_Nex_Icon {
             get {
                 object obj = ResourceManager.GetObject("5ce2d2238dae3500d605e67d_Delivery-Management-system-Nex-Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cajas {
+            get {
+                object obj = ResourceManager.GetObject("cajas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap candado2 {
+            get {
+                object obj = ResourceManager.GetObject("candado2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap entrega {
+            get {
+                object obj = ResourceManager.GetObject("entrega", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +163,16 @@ namespace Entregas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap repartidor {
+            get {
+                object obj = ResourceManager.GetObject("repartidor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seguridad {
             get {
                 object obj = ResourceManager.GetObject("seguridad", resourceCulture);
@@ -136,6 +186,16 @@ namespace Entregas.Properties {
         internal static System.Drawing.Bitmap seguridad1 {
             get {
                 object obj = ResourceManager.GetObject("seguridad1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario {
+            get {
+                object obj = ResourceManager.GetObject("usuario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

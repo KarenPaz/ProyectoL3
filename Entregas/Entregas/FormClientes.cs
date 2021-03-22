@@ -15,7 +15,7 @@ namespace Entregas
     public partial class FormClientes : Form
     {
         ClienteBL _clientes;
-        private Stream fileStream;//
+        //private Stream fileStream;//
         TiposBL _tiposBL;                                                                                                
 
         public FormClientes()
@@ -81,7 +81,7 @@ namespace Entregas
             {
                 listadeClientesBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
-                MessageBox.Show("Producto Guardado");
+                MessageBox.Show("Cliente ha sido creado");
             }
             else
             {
@@ -161,6 +161,11 @@ namespace Entregas
         private void button2_Click(object sender, EventArgs e)//
         {
             fotoPictureBox.Image = null;//
+
+        }
+
+        private void fotoPictureBox_Click(object sender, EventArgs e)
+        {
 
         }
     }

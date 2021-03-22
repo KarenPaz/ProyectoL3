@@ -21,7 +21,7 @@ namespace BL.Entregas
         }
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Tipo> Tipos { get; set; }//
-        
+        public DbSet<Entrega> Entrega { get; set; }
     }
 
 }
