@@ -78,6 +78,14 @@ namespace BL.Entregas
         {
             var resultado = new Resultado();
             resultado.Exitoso = true;
+
+            if (Cliente == null)
+            {
+                resultado.Mensaje = "Agregue un cliente valido";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
             if (string.IsNullOrEmpty(Cliente.Contacto) == true)
             {
                 resultado.Mensaje = "Ingrese un contacto";

@@ -106,5 +106,45 @@ namespace Entregas
 
             listaEntregasBindingSource.ResetBindings(false);
         }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            if (idTextBox.Text != "")
+            {
+                var resultado = MessageBox.Show("Desea anular esta factura?", "Anular", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    var id = Convert.ToInt32(idTextBox.Text);
+                    Anular(id);
+                }
+            }
+        }
+
+        private void Anular(int id)
+        {
+            var resultado = _entregaBL.AnularEntrega(id);
+            if (resultado == true)
+            {
+                listaEntregasBindingSource.ResetBindings(false);
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error al anular la factutra");
+            }
+        }
+
+        private void listaEntregasBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            var entrega = (Entrega)listaEntregasBindingSource.Current;
+
+            if (entrega != null && entrega.Id != 0 && entrega.Activo == false)
+            {
+                label1.Visible = true;
+            }
+            else
+            {
+                label1.Visible = false;
+            }
+        }
     }
 }

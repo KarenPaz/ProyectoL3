@@ -68,13 +68,44 @@ namespace BL.Entregas
 
             return resultado;
         }
-        private Resultado Validar(Entrega factura)
+        private Resultado Validar(Entrega entrega)
         {
             var resultado = new Resultado();
             resultado.Exitoso = true;
+            if (entrega == null)
+            {
+                resultado.Mensaje = "Agregue una factura para poderla salvar";
+                resultado.Exitoso = false;
 
-            return resultado;
+                return resultado;
+            }
+            if (entrega.Activo == false)
+            {
+                resultado.Mensaje = "La factura esta anulada y no se puede realizar cambios en ella.";
+                resultado.Exitoso = false;
+            }
+            if (entrega.ClienteId == 0)
+            {
+                resultado.Mensaje = "Seleccione un cliente";
+                resultado.Exitoso = false;
+            }
+            if (entrega.EntregaDetalle.Count == 0)
+            {
+                resultado.Mensaje = "Agregue ecomiendas a la factura";
+                resultado.Exitoso = false;
+            }
+            foreach (var detalle in entrega.EntregaDetalle)
+            {
+                if (detalle.Peso == 0)
+                {
+                    resultado.Mensaje = "Agregue peso valido";
+                    resultado.Exitoso = false;
+                }
+            }
+
+            return resultado;    
         }
+
         public void CalcularEntrega(Entrega entrega)
         {
             if (entrega != null)
@@ -82,7 +113,7 @@ namespace BL.Entregas
                 double subtotal = 0;
                 foreach (var detalle in entrega.EntregaDetalle)
                 {
-                    detalle.Costo = 20;
+                   // detalle.Costo = 20;
                     detalle.Total = detalle.Peso * detalle.Costo;
 
                     subtotal += detalle.Total;
@@ -91,6 +122,19 @@ namespace BL.Entregas
                 entrega.Impuesto = subtotal * 0.15;
                 entrega.Total = subtotal + entrega.Impuesto;
             }
+        }
+        public bool AnularEntrega(int id)
+        {
+            foreach (var entrega in ListaEntregas)
+            {
+                if (entrega.Id == id)
+                {
+                    entrega.Activo = false;
+                    _contexto.SaveChanges();
+                    return true;
+                }
+            }
+            return false;
         }
     }
 
@@ -123,7 +167,7 @@ namespace BL.Entregas
 
         public EntregaDetalle()
         {
-            Peso = 1;
+            Costo = 20;
           
         }
 
