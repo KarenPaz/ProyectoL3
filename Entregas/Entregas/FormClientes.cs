@@ -168,5 +168,10 @@ namespace Entregas
         {
 
         }
+
+        private void tipoIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

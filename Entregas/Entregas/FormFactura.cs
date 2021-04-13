@@ -13,29 +13,30 @@ namespace Entregas
 {
     public partial class FormFactura : Form
     {
-        EntregaBL _entregaBL;
-        ClienteBL _clienteBL;
+        FacturaBL _facturaBL;
+        ClienteBL _clientesBL;
+        EntregasBL _entregasBL;
 
         public FormFactura()
         {
             InitializeComponent();
-            _entregaBL = new EntregaBL();
-            listaEntregasBindingSource.DataSource = _entregaBL.ObtenerEntregas();
-
-            _clienteBL = new ClienteBL();
-            listadeClientesBindingSource.DataSource = _clienteBL.ObtenerClientes();
-
-
+            _facturaBL = new FacturaBL();
+            listaFacturasBindingSource.DataSource = _facturaBL.ObtenerFacturas();
+            _clientesBL = new ClienteBL();
+            listadeClientesBindingSource.DataSource = _clientesBL.ObtenerClientes();
+            _entregasBL = new EntregasBL();
+            listaEntregasBindingSource.DataSource = _entregasBL.ObtenerEntregas();
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            _entregaBL.AgregarEntrega();
-            listaEntregasBindingSource.MoveLast();
+            _facturaBL.AgregarFactura();
+            listaFacturasBindingSource.MoveLast();
+            //facturaDetalleDataGridView.ClearSelection();
 
             DeshabilitarHabilitarBotones(false);
         }
-        //Habilitar los botones 
+
         private void DeshabilitarHabilitarBotones(bool valor)
         {
             bindingNavigatorMoveFirstItem.Enabled = valor;
@@ -49,18 +50,18 @@ namespace Entregas
             toolStripButtonCancelar.Visible = !valor;
         }
 
-        private void listaEntregasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void listaFacturasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            listaEntregasBindingSource.EndEdit();
+            listaFacturasBindingSource.EndEdit();
+            var factura = (Factura)listaFacturasBindingSource.Current;
 
-            var entrega = (Entrega)listaEntregasBindingSource.Current;
-            var resultado = _entregaBL.GuardarEntrega(entrega);
+            var resultado = _facturaBL.GuardarFactura(factura);
 
             if (resultado.Exitoso == true)
             {
-                listaEntregasBindingSource.ResetBindings(false);
+                listaFacturasBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
-                MessageBox.Show("Factura Guardada");
+                MessageBox.Show("Factura generada");
             }
             else
             {
@@ -68,43 +69,17 @@ namespace Entregas
             }
         }
 
+        public void MarcarFacturado(int id)
+        {
+            
+
+        }
+        
+
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
+            _facturaBL.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
-            _entregaBL.CancelarCambios();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var entrega = (Entrega)listaEntregasBindingSource.Current;
-            _entregaBL.AgregarEntregaDetalle(entrega);
-
-            DeshabilitarHabilitarBotones(false);
-
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            var entrega = (Entrega)listaEntregasBindingSource.Current;
-            var entregaDetalle = (EntregaDetalle)entregaDetalleBindingSource.Current;
-
-            _entregaBL.RemoverEntregaDetalle(entrega, entregaDetalle);
-            DeshabilitarHabilitarBotones(false);
-
-        }
-
-        private void entregaDetalleDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            e.ThrowException = false;
-        }
-
-        private void entregaDetalleDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            var entrega = (Entrega)listaEntregasBindingSource.Current;
-            _entregaBL.CalcularEntrega(entrega);
-
-            listaEntregasBindingSource.ResetBindings(false);
         }
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
@@ -119,25 +94,64 @@ namespace Entregas
                 }
             }
         }
-
         private void Anular(int id)
         {
-            var resultado = _entregaBL.AnularEntrega(id);
+            var resultado = _facturaBL.AnularFactura(id);
+
             if (resultado == true)
             {
-                listaEntregasBindingSource.ResetBindings(false);
+                listaFacturasBindingSource.ResetBindings(false);
             }
             else
             {
-                MessageBox.Show("Ocurrio un error al anular la factutra");
+                MessageBox.Show("Ocurrio un error al anular la factura");
             }
         }
 
-        private void listaEntregasBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-            var entrega = (Entrega)listaEntregasBindingSource.Current;
 
-            if (entrega != null && entrega.Id != 0 && entrega.Activo == false)
+
+        private void listaFacturasBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var factura = (Factura)listaFacturasBindingSource.Current;
+            _facturaBL.AgregarFacturaDetalle(factura);
+            DeshabilitarHabilitarBotones(false);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var factura = (Factura)listaFacturasBindingSource.Current;
+            var facturaDetalle = (FacturaDetalle)facturaDetalleBindingSource.Current;
+            _facturaBL.RemoverFacturaDetalle(factura, facturaDetalle);
+            
+                DeshabilitarHabilitarBotones(false);
+        }
+
+        private void facturaDetalleDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+        }
+
+        private void facturaDetalleDataGridView_DataError_1(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+        }
+
+        private void facturaDetalleDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            var factura = (Factura)listaFacturasBindingSource.Current;
+            _facturaBL.CalcularFactura(factura);
+            listaFacturasBindingSource.ResetBindings(false);
+        }
+
+        private void listaFacturasBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            var factura = (Factura)listaFacturasBindingSource.Current;
+            if (factura != null && factura.Id !=0 && factura.Activo == false)
             {
                 label1.Visible = true;
             }
@@ -146,5 +160,12 @@ namespace Entregas
                 label1.Visible = false;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form formEnvio = new FormEnvio();
+            formEnvio.Show();
+        }
     }
+    
 }

@@ -76,5 +76,26 @@ namespace Entregas
         {
 
         }
+
+        private void historialDeEnvíosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteEntregas = new FormReporteEntregas();
+            formReporteEntregas.MdiParent = this;
+            formReporteEntregas.Show();
+        }
+
+        private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteFacturas = new FormReporteFacturas();
+            formReporteFacturas.MdiParent = this;
+            formReporteFacturas.Show();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteClientes = new FormReportedeClientes();
+            formReporteClientes.MdiParent = this;
+            formReporteClientes.Show();
+        }
     }
 }

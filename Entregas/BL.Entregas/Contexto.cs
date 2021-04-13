@@ -10,18 +10,25 @@ namespace BL.Entregas
 {
     public class Contexto: DbContext
     {
-        public Contexto(): base("Clientes")
+        public Contexto(): base("Delivery")
         {
 
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            Database.SetInitializer(new DatosdeInicio());//
+            Database.SetInitializer(new DatosdeInicio());//AGREGA DATOS DE INCIIO A AL BASE DE DATOS DESPUES DE ELIMINARLA
         }
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Tipo> Tipos { get; set; }//
-        public DbSet<Entrega> Entrega { get; set; }
+        public DbSet<Entrega> Entregas { get; set; }
+        //public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Factura> Facturas { get; set; }
+        public DbSet<TiposPaquete> TiposPaquetes { get; set; }
+        public DbSet<FormasPago> FormasdePago { get; set; }
+        public DbSet<Estado> EstadoDePagos { get; set; }
+        public DbSet<Estatus> EstatusPaquete { get; set; }
+
     }
 
 }

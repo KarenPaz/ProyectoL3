@@ -373,7 +373,7 @@
             this.rTNTextBox.Location = new System.Drawing.Point(235, 164);
             this.rTNTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rTNTextBox.Name = "rTNTextBox";
-            this.rTNTextBox.Size = new System.Drawing.Size(381, 22);
+            this.rTNTextBox.Size = new System.Drawing.Size(162, 22);
             this.rTNTextBox.TabIndex = 12;
             // 
             // telefonoTextBox
@@ -383,7 +383,7 @@
             this.telefonoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.telefonoTextBox.Multiline = true;
             this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.Size = new System.Drawing.Size(183, 35);
+            this.telefonoTextBox.Size = new System.Drawing.Size(147, 35);
             this.telefonoTextBox.TabIndex = 14;
             // 
             // fotoPictureBox
@@ -442,6 +442,7 @@
             this.tipoIdComboBox.Size = new System.Drawing.Size(160, 24);
             this.tipoIdComboBox.TabIndex = 19;
             this.tipoIdComboBox.ValueMember = "Id";
+            this.tipoIdComboBox.SelectedIndexChanged += new System.EventHandler(this.tipoIdComboBox_SelectedIndexChanged);
             // 
             // FormClientes
             // 

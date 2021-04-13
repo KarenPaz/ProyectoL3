@@ -81,7 +81,7 @@ namespace BL.Entregas
 
             if (Cliente == null)
             {
-                resultado.Mensaje = "Agregue un cliente valido";
+                resultado.Mensaje = "Agregue un cliente válido";
                 resultado.Exitoso = false;
 
                 return resultado;

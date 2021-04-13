@@ -34,21 +34,11 @@
             this.nuevoEnvíoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevaRutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.especificoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porPesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.específicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.específicoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.recibosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialDeEnvíosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.todosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.especificoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDeRutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -74,8 +64,7 @@
             this.rentasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoEnvíoToolStripMenuItem,
             this.nuevaFacturaToolStripMenuItem,
-            this.nuevoClienteToolStripMenuItem,
-            this.nuevaRutaToolStripMenuItem});
+            this.nuevoClienteToolStripMenuItem});
             this.rentasToolStripMenuItem.Name = "rentasToolStripMenuItem";
             this.rentasToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.rentasToolStripMenuItem.Text = "Transacciones";
@@ -102,114 +91,44 @@
             this.nuevoClienteToolStripMenuItem.Text = "Nuevo Cliente";
             this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
             // 
-            // nuevaRutaToolStripMenuItem
-            // 
-            this.nuevaRutaToolStripMenuItem.Name = "nuevaRutaToolStripMenuItem";
-            this.nuevaRutaToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
-            this.nuevaRutaToolStripMenuItem.Text = "Nueva Ruta";
-            this.nuevaRutaToolStripMenuItem.Click += new System.EventHandler(this.nuevaRutaToolStripMenuItem_Click);
-            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem,
             this.porPesosToolStripMenuItem,
-            this.facturasToolStripMenuItem,
-            this.reporteDeRutasToolStripMenuItem});
+            this.facturasToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // clientesToolStripMenuItem
             // 
-            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generalToolStripMenuItem,
-            this.especificoToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
             this.clientesToolStripMenuItem.Text = "Reporte de Clientes";
-            // 
-            // generalToolStripMenuItem
-            // 
-            this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
-            this.generalToolStripMenuItem.Text = "General";
-            // 
-            // especificoToolStripMenuItem
-            // 
-            this.especificoToolStripMenuItem.Name = "especificoToolStripMenuItem";
-            this.especificoToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
-            this.especificoToolStripMenuItem.Text = "Específico";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // porPesosToolStripMenuItem
             // 
             this.porPesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generalToolStripMenuItem1,
-            this.específicoToolStripMenuItem,
-            this.específicoToolStripMenuItem1,
-            this.recibosToolStripMenuItem,
             this.historialDeEnvíosToolStripMenuItem});
             this.porPesosToolStripMenuItem.Name = "porPesosToolStripMenuItem";
             this.porPesosToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
             this.porPesosToolStripMenuItem.Text = "Reporte de Envíos ";
             // 
-            // generalToolStripMenuItem1
-            // 
-            this.generalToolStripMenuItem1.Name = "generalToolStripMenuItem1";
-            this.generalToolStripMenuItem1.Size = new System.Drawing.Size(207, 26);
-            this.generalToolStripMenuItem1.Text = "Por Entregar";
-            this.generalToolStripMenuItem1.Click += new System.EventHandler(this.generalToolStripMenuItem1_Click);
-            // 
-            // específicoToolStripMenuItem
-            // 
-            this.específicoToolStripMenuItem.Name = "específicoToolStripMenuItem";
-            this.específicoToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
-            this.específicoToolStripMenuItem.Text = "En Tránsito";
-            // 
-            // específicoToolStripMenuItem1
-            // 
-            this.específicoToolStripMenuItem1.Name = "específicoToolStripMenuItem1";
-            this.específicoToolStripMenuItem1.Size = new System.Drawing.Size(207, 26);
-            this.específicoToolStripMenuItem1.Text = "Entregadas";
-            // 
-            // recibosToolStripMenuItem
-            // 
-            this.recibosToolStripMenuItem.Name = "recibosToolStripMenuItem";
-            this.recibosToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
-            this.recibosToolStripMenuItem.Text = "Recibos";
-            // 
             // historialDeEnvíosToolStripMenuItem
             // 
-            this.historialDeEnvíosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.todosToolStripMenuItem,
-            this.especificoToolStripMenuItem1});
             this.historialDeEnvíosToolStripMenuItem.Name = "historialDeEnvíosToolStripMenuItem";
             this.historialDeEnvíosToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.historialDeEnvíosToolStripMenuItem.Text = "Historial de Envíos";
-            // 
-            // todosToolStripMenuItem
-            // 
-            this.todosToolStripMenuItem.Name = "todosToolStripMenuItem";
-            this.todosToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
-            this.todosToolStripMenuItem.Text = "Todos";
-            // 
-            // especificoToolStripMenuItem1
-            // 
-            this.especificoToolStripMenuItem1.Name = "especificoToolStripMenuItem1";
-            this.especificoToolStripMenuItem1.Size = new System.Drawing.Size(151, 26);
-            this.especificoToolStripMenuItem1.Text = "Especifico";
+            this.historialDeEnvíosToolStripMenuItem.Click += new System.EventHandler(this.historialDeEnvíosToolStripMenuItem_Click);
             // 
             // facturasToolStripMenuItem
             // 
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
             this.facturasToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
             this.facturasToolStripMenuItem.Text = "Reporte de Facturas";
-            // 
-            // reporteDeRutasToolStripMenuItem
-            // 
-            this.reporteDeRutasToolStripMenuItem.Name = "reporteDeRutasToolStripMenuItem";
-            this.reporteDeRutasToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
-            this.reporteDeRutasToolStripMenuItem.Text = "Reporte de Rutas";
+            this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
             // 
             // seguridadToolStripMenuItem
             // 
@@ -264,16 +183,6 @@
         private System.Windows.Forms.ToolStripMenuItem nuevoEnvíoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevaFacturaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nuevaRutaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteDeRutasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem especificoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generalToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem específicoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem específicoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem recibosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historialDeEnvíosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem todosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem especificoToolStripMenuItem1;
     }
 }
