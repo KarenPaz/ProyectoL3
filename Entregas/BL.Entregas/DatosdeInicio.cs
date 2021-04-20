@@ -7,6 +7,13 @@ namespace BL.Entregas
     {
         protected override void Seed(Contexto contexto)//
         {
+
+            var usuarioAdmin = new Usuario();
+            usuarioAdmin.Nombre = "admin";
+            usuarioAdmin.Contrasena = "1234";
+            usuarioAdmin.TipoUsuario = "Administradores";
+
+            contexto.Usuarios.Add(usuarioAdmin);
             
             var tipo1 = new Tipo();//
             tipo1.Descripcion = "Cliente Contado";//

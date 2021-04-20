@@ -154,7 +154,7 @@
             // IDtextBox1
             // 
             this.IDtextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEntregasBindingSource, "Id", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "0000"));
-            this.IDtextBox1.Location = new System.Drawing.Point(72, 44);
+            this.IDtextBox1.Location = new System.Drawing.Point(75, 44);
             this.IDtextBox1.Multiline = true;
             this.IDtextBox1.Name = "IDtextBox1";
             this.IDtextBox1.ReadOnly = true;

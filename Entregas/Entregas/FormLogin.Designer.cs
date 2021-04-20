@@ -109,6 +109,7 @@
             this.Usuario.Text = "USUARIO";
             this.Usuario.TextChanged += new System.EventHandler(this.Usuario_TextChanged);
             this.Usuario.Enter += new System.EventHandler(this.Usuario_Enter);
+            this.Usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Usuario_KeyPress);
             this.Usuario.Leave += new System.EventHandler(this.Usuario_Leave);
             // 
             // Contrasena
@@ -125,6 +126,7 @@
             this.Contrasena.Text = "CONTRASEÑA";
             this.Contrasena.TextChanged += new System.EventHandler(this.Contrasena_TextChanged);
             this.Contrasena.Enter += new System.EventHandler(this.Contrasena_Enter);
+            this.Contrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Contrasena_KeyPress);
             this.Contrasena.Leave += new System.EventHandler(this.Contrasena_Leave);
             // 
             // linea
@@ -242,6 +244,7 @@
             this.Text = "Acceso al Sistema";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Todos_KeyPress);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormLogin_MouseDown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

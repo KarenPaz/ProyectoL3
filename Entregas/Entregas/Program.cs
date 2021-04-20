@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Entregas;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -10,6 +11,8 @@ namespace Entregas
 {
     static class Program
     {
+        public static Usuario UsuarioLogueado;
+
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>

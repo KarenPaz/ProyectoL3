@@ -66,6 +66,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.listaTiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             activoLabel = new System.Windows.Forms.Label();
             codigoClienteLabel = new System.Windows.Forms.Label();
             contactoLabel = new System.Windows.Forms.Label();
@@ -86,9 +88,10 @@
             activoLabel.AutoSize = true;
             activoLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             activoLabel.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            activoLabel.Location = new System.Drawing.Point(76, 350);
+            activoLabel.Location = new System.Drawing.Point(57, 284);
+            activoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(68, 22);
+            activoLabel.Size = new System.Drawing.Size(53, 17);
             activoLabel.TabIndex = 1;
             activoLabel.Text = "Activo:";
             // 
@@ -97,9 +100,10 @@
             codigoClienteLabel.AutoSize = true;
             codigoClienteLabel.BackColor = System.Drawing.Color.White;
             codigoClienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            codigoClienteLabel.Location = new System.Drawing.Point(64, 48);
+            codigoClienteLabel.Location = new System.Drawing.Point(48, 39);
+            codigoClienteLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             codigoClienteLabel.Name = "codigoClienteLabel";
-            codigoClienteLabel.Size = new System.Drawing.Size(124, 18);
+            codigoClienteLabel.Size = new System.Drawing.Size(105, 15);
             codigoClienteLabel.TabIndex = 3;
             codigoClienteLabel.Text = "Codigo Cliente:";
             // 
@@ -108,9 +112,10 @@
             contactoLabel.AutoSize = true;
             contactoLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             contactoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            contactoLabel.Location = new System.Drawing.Point(67, 203);
+            contactoLabel.Location = new System.Drawing.Point(50, 165);
+            contactoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             contactoLabel.Name = "contactoLabel";
-            contactoLabel.Size = new System.Drawing.Size(90, 20);
+            contactoLabel.Size = new System.Drawing.Size(73, 16);
             contactoLabel.TabIndex = 5;
             contactoLabel.Text = "Contacto:";
             // 
@@ -119,9 +124,10 @@
             direccionLabel.AutoSize = true;
             direccionLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            direccionLabel.Location = new System.Drawing.Point(68, 247);
+            direccionLabel.Location = new System.Drawing.Point(51, 201);
+            direccionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(96, 20);
+            direccionLabel.Size = new System.Drawing.Size(78, 16);
             direccionLabel.TabIndex = 7;
             direccionLabel.Text = "Direccion:";
             // 
@@ -130,9 +136,10 @@
             nombredeEmpresaLabel.AutoSize = true;
             nombredeEmpresaLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             nombredeEmpresaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombredeEmpresaLabel.Location = new System.Drawing.Point(64, 129);
+            nombredeEmpresaLabel.Location = new System.Drawing.Point(48, 105);
+            nombredeEmpresaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nombredeEmpresaLabel.Name = "nombredeEmpresaLabel";
-            nombredeEmpresaLabel.Size = new System.Drawing.Size(160, 17);
+            nombredeEmpresaLabel.Size = new System.Drawing.Size(124, 13);
             nombredeEmpresaLabel.TabIndex = 9;
             nombredeEmpresaLabel.Text = "Nombre de Empresa:";
             nombredeEmpresaLabel.Click += new System.EventHandler(this.nombredeEmpresaLabel_Click);
@@ -142,9 +149,10 @@
             rTNLabel.AutoSize = true;
             rTNLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             rTNLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            rTNLabel.Location = new System.Drawing.Point(65, 166);
+            rTNLabel.Location = new System.Drawing.Point(49, 135);
+            rTNLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             rTNLabel.Name = "rTNLabel";
-            rTNLabel.Size = new System.Drawing.Size(47, 18);
+            rTNLabel.Size = new System.Drawing.Size(39, 15);
             rTNLabel.TabIndex = 11;
             rTNLabel.Text = "RTN:";
             // 
@@ -153,9 +161,10 @@
             telefonoLabel.AutoSize = true;
             telefonoLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             telefonoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefonoLabel.Location = new System.Drawing.Point(69, 300);
+            telefonoLabel.Location = new System.Drawing.Point(52, 244);
+            telefonoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             telefonoLabel.Name = "telefonoLabel";
-            telefonoLabel.Size = new System.Drawing.Size(87, 20);
+            telefonoLabel.Size = new System.Drawing.Size(74, 16);
             telefonoLabel.TabIndex = 13;
             telefonoLabel.Text = "Telefono:";
             // 
@@ -164,10 +173,9 @@
             tipoIdLabel.AutoSize = true;
             tipoIdLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             tipoIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tipoIdLabel.Location = new System.Drawing.Point(69, 89);
-            tipoIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            tipoIdLabel.Location = new System.Drawing.Point(52, 72);
             tipoIdLabel.Name = "tipoIdLabel";
-            tipoIdLabel.Size = new System.Drawing.Size(126, 18);
+            tipoIdLabel.Size = new System.Drawing.Size(108, 15);
             tipoIdLabel.TabIndex = 18;
             tipoIdLabel.Text = "Tipo de Cliente:";
             // 
@@ -199,7 +207,7 @@
             this.listadeClientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listadeClientesBindingNavigator.Name = "listadeClientesBindingNavigator";
             this.listadeClientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listadeClientesBindingNavigator.Size = new System.Drawing.Size(1010, 27);
+            this.listadeClientesBindingNavigator.Size = new System.Drawing.Size(758, 27);
             this.listadeClientesBindingNavigator.TabIndex = 0;
             this.listadeClientesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -210,7 +218,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
@@ -242,7 +250,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(49, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
@@ -309,7 +317,7 @@
             this.toolStripButtonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCancelar.Image")));
             this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCancelar.Name = "toolStripButtonCancelar";
-            this.toolStripButtonCancelar.Size = new System.Drawing.Size(70, 24);
+            this.toolStripButtonCancelar.Size = new System.Drawing.Size(57, 24);
             this.toolStripButtonCancelar.Text = "Cancelar";
             this.toolStripButtonCancelar.Visible = false;
             this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
@@ -319,22 +327,22 @@
             this.activoCheckBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listadeClientesBindingSource, "Activo", true));
             this.activoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activoCheckBox.Location = new System.Drawing.Point(237, 348);
-            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.activoCheckBox.Location = new System.Drawing.Point(178, 283);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(20, 25);
+            this.activoCheckBox.Size = new System.Drawing.Size(15, 20);
             this.activoCheckBox.TabIndex = 2;
             this.activoCheckBox.UseVisualStyleBackColor = false;
             // 
             // IdTextBox
             // 
             this.IdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Id", true));
-            this.IdTextBox.Location = new System.Drawing.Point(235, 39);
-            this.IdTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.IdTextBox.Location = new System.Drawing.Point(176, 32);
+            this.IdTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.IdTextBox.Multiline = true;
             this.IdTextBox.Name = "IdTextBox";
             this.IdTextBox.ReadOnly = true;
-            this.IdTextBox.Size = new System.Drawing.Size(104, 34);
+            this.IdTextBox.Size = new System.Drawing.Size(79, 28);
             this.IdTextBox.TabIndex = 4;
             this.IdTextBox.Text = "\r\n";
             this.IdTextBox.TextChanged += new System.EventHandler(this.IdTextBox_TextChanged);
@@ -342,58 +350,57 @@
             // contactoTextBox
             // 
             this.contactoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Contacto", true));
-            this.contactoTextBox.Location = new System.Drawing.Point(235, 199);
-            this.contactoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.contactoTextBox.Location = new System.Drawing.Point(176, 162);
+            this.contactoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.contactoTextBox.Name = "contactoTextBox";
-            this.contactoTextBox.Size = new System.Drawing.Size(381, 22);
+            this.contactoTextBox.Size = new System.Drawing.Size(287, 20);
             this.contactoTextBox.TabIndex = 6;
             // 
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(237, 235);
-            this.direccionTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.direccionTextBox.Location = new System.Drawing.Point(178, 191);
+            this.direccionTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.direccionTextBox.Multiline = true;
             this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(379, 31);
+            this.direccionTextBox.Size = new System.Drawing.Size(285, 26);
             this.direccionTextBox.TabIndex = 8;
             // 
             // nombredeEmpresaTextBox
             // 
             this.nombredeEmpresaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "NombredeEmpresa", true));
-            this.nombredeEmpresaTextBox.Location = new System.Drawing.Point(235, 127);
-            this.nombredeEmpresaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nombredeEmpresaTextBox.Location = new System.Drawing.Point(176, 103);
+            this.nombredeEmpresaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nombredeEmpresaTextBox.Name = "nombredeEmpresaTextBox";
-            this.nombredeEmpresaTextBox.Size = new System.Drawing.Size(381, 22);
+            this.nombredeEmpresaTextBox.Size = new System.Drawing.Size(287, 20);
             this.nombredeEmpresaTextBox.TabIndex = 10;
             // 
             // rTNTextBox
             // 
             this.rTNTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "RTN", true));
-            this.rTNTextBox.Location = new System.Drawing.Point(235, 164);
-            this.rTNTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rTNTextBox.Location = new System.Drawing.Point(176, 133);
+            this.rTNTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.rTNTextBox.Name = "rTNTextBox";
-            this.rTNTextBox.Size = new System.Drawing.Size(162, 22);
+            this.rTNTextBox.Size = new System.Drawing.Size(122, 20);
             this.rTNTextBox.TabIndex = 12;
             // 
             // telefonoTextBox
             // 
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(237, 288);
-            this.telefonoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.telefonoTextBox.Location = new System.Drawing.Point(178, 234);
+            this.telefonoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.telefonoTextBox.Multiline = true;
             this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.Size = new System.Drawing.Size(147, 35);
+            this.telefonoTextBox.Size = new System.Drawing.Size(111, 29);
             this.telefonoTextBox.TabIndex = 14;
             // 
             // fotoPictureBox
             // 
             this.fotoPictureBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listadeClientesBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.fotoPictureBox.Location = new System.Drawing.Point(639, 31);
-            this.fotoPictureBox.Margin = new System.Windows.Forms.Padding(4);
+            this.fotoPictureBox.Location = new System.Drawing.Point(480, 72);
             this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(333, 180);
+            this.fotoPictureBox.Size = new System.Drawing.Size(250, 146);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotoPictureBox.TabIndex = 16;
             this.fotoPictureBox.TabStop = false;
@@ -401,10 +408,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(658, 275);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(495, 238);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 27);
+            this.button1.Size = new System.Drawing.Size(95, 22);
             this.button1.TabIndex = 17;
             this.button1.Text = "Agregar Foto";
             this.button1.UseVisualStyleBackColor = true;
@@ -412,10 +418,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(855, 274);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(642, 238);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 28);
+            this.button2.Size = new System.Drawing.Size(88, 23);
             this.button2.TabIndex = 18;
             this.button2.Text = "Remover Foto";
             this.button2.UseVisualStyleBackColor = true;
@@ -436,23 +441,42 @@
             this.tipoIdComboBox.DisplayMember = "Descripcion";
             this.tipoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipoIdComboBox.FormattingEnabled = true;
-            this.tipoIdComboBox.Location = new System.Drawing.Point(237, 85);
-            this.tipoIdComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.tipoIdComboBox.Location = new System.Drawing.Point(178, 69);
             this.tipoIdComboBox.Name = "tipoIdComboBox";
-            this.tipoIdComboBox.Size = new System.Drawing.Size(160, 24);
+            this.tipoIdComboBox.Size = new System.Drawing.Size(121, 21);
             this.tipoIdComboBox.TabIndex = 19;
             this.tipoIdComboBox.ValueMember = "Id";
             this.tipoIdComboBox.SelectedIndexChanged += new System.EventHandler(this.tipoIdComboBox_SelectedIndexChanged);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(668, 30);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Buscar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(480, 32);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(182, 20);
+            this.textBox1.TabIndex = 21;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
             // FormClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::Entregas.Properties.Resources.istockphoto_637864518_170667a;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1010, 409);
+            this.ClientSize = new System.Drawing.Size(758, 332);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(tipoIdLabel);
             this.Controls.Add(this.tipoIdComboBox);
             this.Controls.Add(this.button2);
@@ -475,7 +499,6 @@
             this.Controls.Add(this.listadeClientesBindingNavigator);
             this.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Id", true));
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Cliente";
@@ -521,5 +544,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.BindingSource listaTiposBindingSource;
         private System.Windows.Forms.ComboBox tipoIdComboBox;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
