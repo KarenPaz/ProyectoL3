@@ -234,7 +234,8 @@ namespace Entregas
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Form formPesos = new FormTabladePesos();
+            formPesos.Show();
         }
     }
 }
