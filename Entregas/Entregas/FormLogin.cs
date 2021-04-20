@@ -52,20 +52,16 @@ namespace Entregas
             button1.Text = "Verificando...";
             Application.DoEvents();
 
-            var usuarioDB = _seguridad.Acceso(usuario, contrasena);
+            var resultado = _seguridad.Acceso(usuario, contrasena);
 
-            if (usuarioDB != null)
+            if (resultado == true)
             {
-                Program.UsuarioLogueado = usuarioDB;
                 this.Close();
             }
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrecta");
             }
-
-            button1.Enabled = true;
-            button1.Text = "Aceptar";
 
         }
 
@@ -132,44 +128,6 @@ namespace Entregas
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void Usuario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                if (Usuario.Text != "")
-                {
-                    Contrasena.Focus();
-                }
-            }
-            if (e.KeyChar == Convert.ToChar(Keys.Escape))
-            {
-                Application.Exit();
-            }
-        }
-
-        private void Contrasena_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                if (Contrasena.Text != "")
-                {
-                    button1_Click(null,null);
-                }
-            }
-            if (e.KeyChar == Convert.ToChar(Keys.Escape))
-            {
-                Application.Exit();
-            }
-        }
-
-        private void Todos_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if(e.KeyChar == Convert.ToChar(Keys.Escape))
-            {
-                Application.Exit();
-            }
         }
     }
 }

@@ -21,21 +21,9 @@ namespace BL.Entregas
 
         public BindingList<Clientes> ObtenerClientes()
         {
-            //_contexto.Clientes.Load();
-            //ListadeClientes = _contexto.Clientes.Local.ToBindingList();
-
-            ListadeClientes = new BindingList<Clientes>(_contexto.Clientes.OrderBy(o => o.NombredeEmpresa).ToList());
-
+            _contexto.Clientes.Load();
+            ListadeClientes = _contexto.Clientes.Local.ToBindingList();
             return ListadeClientes;
-        }
-
-        public BindingList<Clientes> ObtenerClientes(string buscar)
-        {
-            var query = _contexto.Clientes.Where(p => p.NombredeEmpresa.ToLower().Contains(buscar.ToLower()) == true).ToList();
-
-            var resultado = new BindingList<Clientes>(query);
-
-            return resultado;
         }
 
         public void CancelarCambios()//
