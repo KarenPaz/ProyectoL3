@@ -90,63 +90,70 @@
             // activoLabel
             // 
             activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(364, 47);
+            activoLabel.Location = new System.Drawing.Point(303, 87);
+            activoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(50, 17);
+            activoLabel.Size = new System.Drawing.Size(40, 13);
             activoLabel.TabIndex = 1;
             activoLabel.Text = "Activo:";
             // 
             // clienteIdLabel
             // 
             clienteIdLabel.AutoSize = true;
-            clienteIdLabel.Location = new System.Drawing.Point(41, 88);
+            clienteIdLabel.Location = new System.Drawing.Point(61, 121);
+            clienteIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             clienteIdLabel.Name = "clienteIdLabel";
-            clienteIdLabel.Size = new System.Drawing.Size(55, 17);
+            clienteIdLabel.Size = new System.Drawing.Size(42, 13);
             clienteIdLabel.TabIndex = 3;
             clienteIdLabel.Text = "Cliente:";
             // 
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(364, 85);
+            fechaLabel.Location = new System.Drawing.Point(303, 118);
+            fechaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(51, 17);
+            fechaLabel.Size = new System.Drawing.Size(40, 13);
             fechaLabel.TabIndex = 5;
             fechaLabel.Text = "Fecha:";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(41, 49);
+            idLabel.Location = new System.Drawing.Point(61, 89);
+            idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(134, 17);
+            idLabel.Size = new System.Drawing.Size(101, 13);
             idLabel.TabIndex = 7;
             idLabel.Text = "Número de Factura:";
             // 
             // impuestoLabel
             // 
             impuestoLabel.AutoSize = true;
-            impuestoLabel.Location = new System.Drawing.Point(445, 441);
+            impuestoLabel.Location = new System.Drawing.Point(364, 407);
+            impuestoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             impuestoLabel.Name = "impuestoLabel";
-            impuestoLabel.Size = new System.Drawing.Size(69, 17);
+            impuestoLabel.Size = new System.Drawing.Size(53, 13);
             impuestoLabel.TabIndex = 9;
             impuestoLabel.Text = "Impuesto:";
             // 
             // subtotalLabel
             // 
             subtotalLabel.AutoSize = true;
-            subtotalLabel.Location = new System.Drawing.Point(445, 413);
+            subtotalLabel.Location = new System.Drawing.Point(364, 385);
+            subtotalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             subtotalLabel.Name = "subtotalLabel";
-            subtotalLabel.Size = new System.Drawing.Size(64, 17);
+            subtotalLabel.Size = new System.Drawing.Size(49, 13);
             subtotalLabel.TabIndex = 11;
             subtotalLabel.Text = "Subtotal:";
             // 
             // totalLabel
             // 
             totalLabel.AutoSize = true;
-            totalLabel.Location = new System.Drawing.Point(445, 469);
+            totalLabel.Location = new System.Drawing.Point(364, 430);
+            totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(44, 17);
+            totalLabel.Size = new System.Drawing.Size(34, 13);
             totalLabel.TabIndex = 13;
             totalLabel.Text = "Total:";
             // 
@@ -183,7 +190,7 @@
             this.listaFacturasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaFacturasBindingNavigator.Name = "listaFacturasBindingNavigator";
             this.listaFacturasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaFacturasBindingNavigator.Size = new System.Drawing.Size(689, 27);
+            this.listaFacturasBindingNavigator.Size = new System.Drawing.Size(578, 27);
             this.listaFacturasBindingNavigator.TabIndex = 0;
             this.listaFacturasBindingNavigator.Text = "bindingNavigator1";
             this.listaFacturasBindingNavigator.RefreshItems += new System.EventHandler(this.listaFacturasBindingNavigator_RefreshItems);
@@ -191,7 +198,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
@@ -223,9 +230,10 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
+            this.bindingNavigatorPositionItem.Click += new System.EventHandler(this.bindingNavigatorPositionItem_Click);
             // 
             // bindingNavigatorSeparator1
             // 
@@ -260,7 +268,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(131, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(109, 24);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
@@ -269,7 +277,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(76, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(66, 24);
             this.bindingNavigatorDeleteItem.Text = "Anular";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
@@ -277,7 +285,7 @@
             // 
             this.listaFacturasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listaFacturasBindingNavigatorSaveItem.Image")));
             this.listaFacturasBindingNavigatorSaveItem.Name = "listaFacturasBindingNavigatorSaveItem";
-            this.listaFacturasBindingNavigatorSaveItem.Size = new System.Drawing.Size(86, 24);
+            this.listaFacturasBindingNavigatorSaveItem.Size = new System.Drawing.Size(73, 24);
             this.listaFacturasBindingNavigatorSaveItem.Text = "Guardar";
             this.listaFacturasBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaFacturasBindingNavigatorSaveItem_Click);
             // 
@@ -286,7 +294,7 @@
             this.toolStripButtonCancelar.Image = global::Entregas.Properties.Resources.Prohibido;
             this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCancelar.Name = "toolStripButtonCancelar";
-            this.toolStripButtonCancelar.Size = new System.Drawing.Size(90, 24);
+            this.toolStripButtonCancelar.Size = new System.Drawing.Size(77, 24);
             this.toolStripButtonCancelar.Text = "Cancelar";
             this.toolStripButtonCancelar.Visible = false;
             this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
@@ -303,56 +311,62 @@
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaFacturasBindingSource, "Activo", true));
             this.activoCheckBox.Enabled = false;
-            this.activoCheckBox.Location = new System.Drawing.Point(440, 42);
+            this.activoCheckBox.Location = new System.Drawing.Point(360, 83);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(33, 24);
+            this.activoCheckBox.Size = new System.Drawing.Size(25, 20);
             this.activoCheckBox.TabIndex = 2;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
             // fechaDateTimePicker
             // 
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaFacturasBindingSource, "Fecha", true));
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(440, 81);
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(360, 115);
+            this.fechaDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
-            this.fechaDateTimePicker.Size = new System.Drawing.Size(232, 22);
+            this.fechaDateTimePicker.Size = new System.Drawing.Size(175, 20);
             this.fechaDateTimePicker.TabIndex = 6;
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Id", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "0000"));
-            this.idTextBox.Location = new System.Drawing.Point(175, 46);
+            this.idTextBox.Location = new System.Drawing.Point(161, 86);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(131, 22);
+            this.idTextBox.Size = new System.Drawing.Size(99, 20);
             this.idTextBox.TabIndex = 8;
             // 
             // impuestoTextBox
             // 
             this.impuestoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Impuesto", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.impuestoTextBox.Location = new System.Drawing.Point(521, 438);
+            this.impuestoTextBox.Location = new System.Drawing.Point(421, 405);
+            this.impuestoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.impuestoTextBox.Name = "impuestoTextBox";
             this.impuestoTextBox.ReadOnly = true;
-            this.impuestoTextBox.Size = new System.Drawing.Size(115, 22);
+            this.impuestoTextBox.Size = new System.Drawing.Size(87, 20);
             this.impuestoTextBox.TabIndex = 10;
             this.impuestoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // subtotalTextBox
             // 
             this.subtotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Subtotal", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.subtotalTextBox.Location = new System.Drawing.Point(521, 410);
+            this.subtotalTextBox.Location = new System.Drawing.Point(421, 382);
+            this.subtotalTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.subtotalTextBox.Name = "subtotalTextBox";
             this.subtotalTextBox.ReadOnly = true;
-            this.subtotalTextBox.Size = new System.Drawing.Size(115, 22);
+            this.subtotalTextBox.Size = new System.Drawing.Size(87, 20);
             this.subtotalTextBox.TabIndex = 12;
             this.subtotalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // totalTextBox
             // 
             this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Total", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.totalTextBox.Location = new System.Drawing.Point(521, 466);
+            this.totalTextBox.Location = new System.Drawing.Point(421, 428);
+            this.totalTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
-            this.totalTextBox.Size = new System.Drawing.Size(115, 22);
+            this.totalTextBox.Size = new System.Drawing.Size(87, 20);
             this.totalTextBox.TabIndex = 14;
             this.totalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -363,9 +377,10 @@
             this.clienteIdComboBox.DisplayMember = "NombredeEmpresa";
             this.clienteIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.clienteIdComboBox.FormattingEnabled = true;
-            this.clienteIdComboBox.Location = new System.Drawing.Point(133, 88);
+            this.clienteIdComboBox.Location = new System.Drawing.Point(130, 121);
+            this.clienteIdComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.clienteIdComboBox.Name = "clienteIdComboBox";
-            this.clienteIdComboBox.Size = new System.Drawing.Size(173, 24);
+            this.clienteIdComboBox.Size = new System.Drawing.Size(131, 21);
             this.clienteIdComboBox.TabIndex = 16;
             this.clienteIdComboBox.ValueMember = "Id";
             // 
@@ -378,9 +393,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(218, 384);
+            this.button1.Location = new System.Drawing.Point(194, 361);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 46);
+            this.button1.Size = new System.Drawing.Size(69, 37);
             this.button1.TabIndex = 17;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
@@ -389,9 +405,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(322, 384);
+            this.button2.Location = new System.Drawing.Point(272, 361);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 46);
+            this.button2.Size = new System.Drawing.Size(69, 37);
             this.button2.TabIndex = 18;
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
@@ -407,10 +424,11 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.facturaDetalleDataGridView.DataSource = this.facturaDetalleBindingSource;
-            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(49, 135);
+            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(67, 159);
+            this.facturaDetalleDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.facturaDetalleDataGridView.Name = "facturaDetalleDataGridView";
             this.facturaDetalleDataGridView.RowTemplate.Height = 24;
-            this.facturaDetalleDataGridView.Size = new System.Drawing.Size(587, 220);
+            this.facturaDetalleDataGridView.Size = new System.Drawing.Size(440, 179);
             this.facturaDetalleDataGridView.TabIndex = 18;
             this.facturaDetalleDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturaDetalleDataGridView_CellEndEdit);
             this.facturaDetalleDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.facturaDetalleDataGridView_DataError_1);
@@ -453,9 +471,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(502, 42);
+            this.label1.Location = new System.Drawing.Point(406, 83);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 24);
+            this.label1.Size = new System.Drawing.Size(79, 18);
             this.label1.TabIndex = 19;
             this.label1.Text = "ANULADO";
             this.label1.Visible = false;
@@ -463,9 +482,10 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(49, 384);
+            this.button3.Location = new System.Drawing.Point(67, 361);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 46);
+            this.button3.Size = new System.Drawing.Size(115, 37);
             this.button3.TabIndex = 20;
             this.button3.Text = "Ver Entregas";
             this.button3.UseVisualStyleBackColor = true;
@@ -473,9 +493,9 @@
             // 
             // FormFactura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 520);
+            this.ClientSize = new System.Drawing.Size(578, 460);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.facturaDetalleDataGridView);
@@ -496,7 +516,6 @@
             this.Controls.Add(totalLabel);
             this.Controls.Add(this.totalTextBox);
             this.Controls.Add(this.listaFacturasBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormFactura";
             this.Text = "Nueva Factura";
             ((System.ComponentModel.ISupportInitialize)(this.listaFacturasBindingSource)).EndInit();

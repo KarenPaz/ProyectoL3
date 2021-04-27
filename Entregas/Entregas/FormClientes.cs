@@ -41,10 +41,13 @@ namespace Entregas
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
+            textBox1.Text = "";
+            listadeClientesBindingSource.DataSource = _clientes.ObtenerClientes();   ////////////////////
+
             _clientes.AgregarCliente();
             listadeClientesBindingSource.MoveLast();
 
-            DeshabilitarHabilitarBotones(false); 
+            DeshabilitarHabilitarBotones(false);
         }
 
         //Habilitar los botones 
@@ -104,11 +107,13 @@ namespace Entregas
         }
 
         private void Eliminar(int id)
-        {            
+        {
             var resultado = _clientes.EliminarCliente(id);
 
             if (resultado == true)
             {
+                textBox1.Text = "";
+                listadeClientesBindingSource.DataSource = _clientes.ObtenerClientes(); ///////////////////////
                 listadeClientesBindingSource.ResetBindings(false);
             }
             else

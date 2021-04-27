@@ -166,6 +166,21 @@ namespace Entregas
             Form formEnvio = new FormEnvio();
             formEnvio.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void bindingNavigatorPositionItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

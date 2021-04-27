@@ -55,11 +55,16 @@ namespace Entregas
                     nuevoEnvíoToolStripMenuItem.Visible = true;
                     nuevaFacturaToolStripMenuItem.Visible = true;
                     nuevoClienteToolStripMenuItem.Visible = true;
+                    reportesToolStripMenuItem.Visible = true;
                     clientesToolStripMenuItem.Visible = true;
                     porPesosToolStripMenuItem.Visible = true;
                     facturasToolStripMenuItem.Visible = true;
                     loginToolStripMenuItem.Visible = true;
                     administracionDeUsuariosToolStripMenuItem.Visible = true;
+                    rentasToolStripMenuItem.Visible = true;
+                    historialDeEnvíosToolStripMenuItem.Visible = true;
+                    facturasToolStripMenuItem.Visible = true;
+                    clientesToolStripMenuItem.Visible = true;
                 }
 
 

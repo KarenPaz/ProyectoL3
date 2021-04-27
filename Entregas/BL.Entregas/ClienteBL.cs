@@ -21,10 +21,10 @@ namespace BL.Entregas
 
         public BindingList<Clientes> ObtenerClientes()
         {
-            //_contexto.Clientes.Load();
-            //ListadeClientes = _contexto.Clientes.Local.ToBindingList();
+            _contexto.Clientes.Load();
+            ListadeClientes = _contexto.Clientes.Local.ToBindingList();
 
-            ListadeClientes = new BindingList<Clientes>(_contexto.Clientes.OrderBy(o => o.NombredeEmpresa).ToList());
+            //ListadeClientes = new BindingList<Clientes>(_contexto.Clientes.OrderBy(o => o.NombredeEmpresa).ToList());
 
             return ListadeClientes;
         }
